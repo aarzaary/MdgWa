@@ -24,6 +24,7 @@ jobs:
       run: |
         ./gradlew assembleDebug
         ./gradlew connectedDebugAndroidTest
+        ./gradlew assembleRelease
         
     - name: Generate Release TAG
       id: date
