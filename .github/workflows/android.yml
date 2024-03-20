@@ -25,9 +25,9 @@ jobs:
         ./gradlew assembleDebug
         ./gradlew connectedDebugAndroidTest
         
-    - name: Get current date
+    - name: Generate Release TAG
       id: date
-      run: echo "date=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+      run: echo "date=$(date +'%Y.%m.%d-%H.%M.%S')" >> $GITHUB_OUTPUT
     - name: Create Release
       uses: ncipollo/release-action@v1
       with:
